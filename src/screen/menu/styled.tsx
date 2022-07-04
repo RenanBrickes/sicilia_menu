@@ -10,7 +10,7 @@ export const Image = styled.img`
   `}
 `;
 
-export const title = styled.h1`
+export const Title = styled.h1`
   ${({ theme }) => css`
     margin-left: 80px;
     color: ${theme.colors.darkBlue};
