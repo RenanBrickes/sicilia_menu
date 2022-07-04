@@ -12,6 +12,5 @@ export const theme = {
             text: "'Source Sans Pro', sans-serif"
         }
     }
-    
 };
 

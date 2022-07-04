@@ -11,8 +11,9 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 1.6rem;
         margin: 0;
         padding: 0;
+        font-family: ${(props) => `${props.theme.font.family.text}`}
     }
-    h1 {
+    h1, h2, h3 {
         font-family: ${(props) => `${props.theme.font.family.title}`}
     }
 `;
