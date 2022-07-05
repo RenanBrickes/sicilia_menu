@@ -16,13 +16,13 @@ export const Title = styled.h1`
     color: ${theme.colors.darkBlue};
     font-size: 100px;
     font-weight: bold;
-    position: relative;
-    top: -200px;
+    position: absolute;
+    top: 30px;
 
     @media ${theme.media.medium} {
       margin-left:20px;
       font-size: 50px;
-      top: -100px;
+      top: 115px;
     }
   `}
 `;
