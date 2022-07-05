@@ -14,6 +14,8 @@ export const theme = {
     },
     media: {
         medium: '(max-width : 768px)',
+        mediumx: '(max-width : 1024px)',
+        mediumxx: '(max-width : 1440px)',
     },
 };
 

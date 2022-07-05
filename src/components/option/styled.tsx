@@ -6,6 +6,7 @@ export const Option = styled(Card)`
     background-color: ${theme.colors.blue} !important;
     max-width: 345px;
     height: 250px;
+    cursor: pointer;
     :hover {
       opacity: 0.5;
     }

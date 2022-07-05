@@ -10,12 +10,15 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Italiana&family=Source+Sans+Pro:wght@200&display=swap"
       rel="stylesheet"
     ></link>
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <ThemeProvider theme={theme}>
       <Menu />
       <GlobalStyles theme={theme} />

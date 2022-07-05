@@ -1,9 +1,9 @@
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Option } from "../option/index";
 import * as Styled from "./styled";
 export const GridOption = ({ data }: { data: any }) => {
   return (
-    <Container>
+    <Styled.ContainerGrid>
       <Styled.GridOption container spacing={3}>
         {data.mocks.map((option: Mock, index: number) => (
           <Grid key={index} item xs={4}>
@@ -11,7 +11,7 @@ export const GridOption = ({ data }: { data: any }) => {
           </Grid>
         ))}
       </Styled.GridOption>
-    </Container>
+    </Styled.ContainerGrid>
   );
 };
 
