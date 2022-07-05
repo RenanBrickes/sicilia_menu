@@ -11,6 +11,9 @@ export const theme = {
             title: "'Italiana', serif",
             text: "'Source Sans Pro', sans-serif"
         }
-    }
+    },
+    media: {
+        medium: '(max-width : 768px)',
+    },
 };
 

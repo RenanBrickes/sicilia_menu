@@ -18,5 +18,11 @@ export const Title = styled.h1`
     font-weight: bold;
     position: relative;
     top: -200px;
+
+    @media ${theme.media.medium} {
+      margin-left:20px;
+      font-size: 50px;
+      top: -100px;
+    }
   `}
 `;
