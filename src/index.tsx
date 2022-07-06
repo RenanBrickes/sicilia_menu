@@ -4,6 +4,9 @@ import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/globalStyle";
 import App from "./app";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Cardapio } from "./screen/cardapio/indext";
+import { menuMock } from "./mocks/menuMocks";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +23,12 @@ root.render(
       rel="stylesheet"
     ></link>
     <ThemeProvider theme={theme}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/Appetizers" element={<Cardapio data={menuMock} />} />
+        </Routes>
+      </BrowserRouter>
       <GlobalStyles theme={theme} />
     </ThemeProvider>
   </React.StrictMode>
