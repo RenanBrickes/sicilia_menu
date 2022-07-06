@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Menu from "./screen/menu/menu";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/globalStyle";
+import App from "./app";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +20,7 @@ root.render(
       rel="stylesheet"
     ></link>
     <ThemeProvider theme={theme}>
-      <Menu />
+      <App />
       <GlobalStyles theme={theme} />
     </ThemeProvider>
   </React.StrictMode>
