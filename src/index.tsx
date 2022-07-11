@@ -8,12 +8,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Cardapio } from "./screen/cardapio/indext";
 import { AppetizersMock } from "./mocks/AppetizersMock";
 import { PastaMock } from "./mocks/PastaMock";
+import { Order } from "./screen/order";
+import { OrdersMock } from "./mocks/OrdersMock";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -32,9 +34,10 @@ root.render(
             element={<Cardapio data={AppetizersMock} />}
           />
           <Route path="/Pasta" element={<Cardapio data={PastaMock} />} />
+          <Route path="/Order" element={<Order data={OrdersMock} />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyles theme={theme} />
     </ThemeProvider>
-  </React.StrictMode>
+  </>
 );
