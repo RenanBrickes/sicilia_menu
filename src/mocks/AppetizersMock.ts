@@ -5,7 +5,7 @@ const bruschetta =
   const shrimpGarlic =
   require("../assets/menu/appetizers/shrimp_in_garlic_and_oil.jpg") as string;
 
-export const menuMock = 
+export const AppetizersMock = 
     {
         name: "Appetizers",
         image: bruschetta,

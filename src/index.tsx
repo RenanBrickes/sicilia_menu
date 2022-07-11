@@ -6,7 +6,8 @@ import { GlobalStyles } from "./styles/globalStyle";
 import App from "./app";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Cardapio } from "./screen/cardapio/indext";
-import { menuMock } from "./mocks/menuMocks";
+import { AppetizersMock } from "./mocks/AppetizersMock";
+import { PastaMock } from "./mocks/PastaMock";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -26,7 +27,11 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/Appetizers" element={<Cardapio data={menuMock} />} />
+          <Route
+            path="/Appetizers"
+            element={<Cardapio data={AppetizersMock} />}
+          />
+          <Route path="/Pasta" element={<Cardapio data={PastaMock} />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyles theme={theme} />
