@@ -16,7 +16,10 @@ export const MenuOption = ({
 
   const handleCounter = () => {
     setCounter((value) => value + 1);
-    setTotalItem([...totalItem, { name: name, value: value }]);
+    setTotalItem([
+      ...totalItem,
+      { name: name, value: value, amount: counter, image: image },
+    ]);
   };
 
   return (
@@ -49,4 +52,6 @@ type Option = {
 type ItemOrder = {
   name: string;
   value: number;
+  amount: number;
+  image: string;
 };

@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MenuContainer } from "../../components/menu";
 import { MenuOption } from "../../components/menuOption";
 import * as Styled from "./styled";
@@ -7,9 +8,9 @@ const bg = require("../../assets/bg.jpg") as string;
 
 export const Cardapio = ({ data }: { data: Menu }) => {
   const [totalItem, setTotalItem] = useState<ItemOrder[]>([]);
-
+  let navigate = useNavigate();
   const handleConfirm = () => {
-    console.log(totalItem);
+    navigate("/order", { state: totalItem });
   };
   return (
     <>
@@ -55,4 +56,6 @@ type Option = {
 type ItemOrder = {
   name: string;
   value: number;
+  amount: number;
+  image: string;
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
@@ -9,7 +8,6 @@ import { Cardapio } from "./screen/cardapio/indext";
 import { AppetizersMock } from "./mocks/AppetizersMock";
 import { PastaMock } from "./mocks/PastaMock";
 import { Order } from "./screen/order";
-import { OrdersMock } from "./mocks/OrdersMock";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -34,7 +32,7 @@ root.render(
             element={<Cardapio data={AppetizersMock} />}
           />
           <Route path="/Pasta" element={<Cardapio data={PastaMock} />} />
-          <Route path="/Order" element={<Order data={OrdersMock} />} />
+          <Route path="/Order" element={<Order />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyles theme={theme} />
