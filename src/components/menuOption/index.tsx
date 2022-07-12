@@ -1,10 +1,24 @@
 import { Grid } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import * as Styled from "./styled";
 
-export const MenuOption = ({ data }: { data: Option }) => {
-  const [counterItem, setCounterItem] = useState<number>(0);
+export const MenuOption = ({
+  data,
+  setTotalItem,
+  totalItem,
+}: {
+  data: Option;
+  setTotalItem: React.Dispatch<React.SetStateAction<ItemOrder[]>>;
+  totalItem: ItemOrder[];
+}) => {
   const { name, description, value, image } = data;
+  const [counter, setCounter] = useState<number>(0);
+
+  const handleCounter = () => {
+    setCounter((value) => value + 1);
+    setTotalItem([...totalItem, { name: name, value: value }]);
+  };
+
   return (
     <>
       <Grid item xs={3}>
@@ -18,12 +32,8 @@ export const MenuOption = ({ data }: { data: Option }) => {
         <Styled.TypographyValue>${value}</Styled.TypographyValue>
       </Grid>
       <Styled.GridAddItem item xs={2}>
-        {counterItem > 0 && <Styled.Counter>{counterItem}</Styled.Counter>}
-        <Styled.IconPlus
-          onClick={() => setCounterItem((counterItem) => counterItem + 1)}
-        >
-          add
-        </Styled.IconPlus>
+        {counter > 0 && <Styled.Counter>{counter}</Styled.Counter>}
+        <Styled.IconPlus onClick={handleCounter}>add</Styled.IconPlus>
       </Styled.GridAddItem>
     </>
   );
@@ -34,4 +44,9 @@ type Option = {
   description: string;
   value: number;
   image: string;
+};
+
+type ItemOrder = {
+  name: string;
+  value: number;
 };

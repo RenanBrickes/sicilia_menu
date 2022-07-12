@@ -1,3 +1,4 @@
+import { Button, Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import styled, { css } from "styled-components";
 
@@ -21,7 +22,7 @@ export const Title = styled.h1`
     top: 30px;
 
     @media ${theme.media.medium} {
-      margin-left:20px;
+      margin-left: 20px;
       font-size: 50px;
       top: 115px;
     }
@@ -29,6 +30,25 @@ export const Title = styled.h1`
 `;
 
 export const ContainerStyled = styled(Container)`
-  margin-top :80px;
-  margin-bottom :100px;
+  margin-top: 80px;
+  margin-bottom: 150px;
+`;
+
+export const ContainerConfirm = styled(Grid)`
+  display: grid;
+  justify-content: end;
+  margin-bottom: 50px;
+`;
+
+export const ButtonConfirm = styled(Button)`
+  ${({ theme }) => css`
+    color: white !important;
+    background-color: ${theme.colors.blue} !important;
+    cursor: pointer;
+    border-radius: 25px !important;
+    font-family: ${theme.font.family.text};
+    font-size : 14px !important;
+    font-weight: bold !important;
+    padding: 10px 35px !important;
+  `}
 `;

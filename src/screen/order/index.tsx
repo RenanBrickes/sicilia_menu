@@ -14,7 +14,6 @@ export const Order = ({ data }: { data: Orders }) => {
         (total) => total + (order.amount > 0 ? order.amount : 1) * order.value
       );
     });
-    console.log("render");
   }, [data]);
 
   return (
