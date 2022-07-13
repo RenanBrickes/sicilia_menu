@@ -8,6 +8,7 @@ import { Cardapio } from "./screen/cardapio/indext";
 import { AppetizersMock } from "./mocks/AppetizersMock";
 import { PastaMock } from "./mocks/PastaMock";
 import { Order } from "./screen/order";
+import { Help } from "./screen/help";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -33,6 +34,7 @@ root.render(
           />
           <Route path="/Pasta" element={<Cardapio data={PastaMock} />} />
           <Route path="/Order" element={<Order />} />
+          <Route path="/Help" element={<Help />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyles theme={theme} />
