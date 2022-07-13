@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Sicília
+![Logo Sicília](./prints/nome_02.png)
+Um app para receber pedidos de um restaurante focado em reduzir
+as equipes de trabalho no salão.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
-## Available Scripts
+## O Projeto
+Esse projeto é uma releitura do seu layout original de um app feito pela UX/UI Design <a href="https://www.linkedin.com/in/gabrielevaler/">Gabriele Valerio</a>.
+Esse projeto teve como objetivo construir um app para receber os pedidos do restaurante direto da mesa
+reduzindo a equipe em trabalhos no salão, diminuindo o tempo de espera do cliente para realizar o pedido e
+oferecendo uma experiência inovadora.
 
-In the project directory, you can run:
+![Menu](prints/01.png)
+![Pasta](prints/02.png)
+![Order](prints/03.png)
 
-### `npm start`
+## :hammer: Funcionalidades do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Visualização de opções no menu;
+- Visualização de opções de uma opção especifica do menu com imagem e descrição;
+- Visualização de pedido;
+- Visualização de ajuda;
+- Seleção de quantidade de opções ao realizar pedido;
+- Confirmação de pedido, detalhe do pedido, quantidade e soma de total dos selecionados;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## ⚙️ Novas funcionalidades mapeadas
+- Integração com API propria.
+- Adição de novas opções de menus;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 🔧 Instalação
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone este repositório. Você precisará de `node` e `npm` ou `yarn` instalados globalmente em sua máquina.
+De prefêrencia a instalação do node na versão 14.15.0, onde você pode encontrar por esse link <a href="https://nodejs.org/ja/blog/release/v14.15.0/">clique aqui</a>.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Instalação:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm install` ou `npm install --global yarn`
 
-### `npm run eject`
+Para iniciar o servidor:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm start` ou `yarn start` 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para visitar o aplicativo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`localhost:3000/`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠️ Construído com
 
-## Learn More
+* [React](https://pt-br.reactjs.org/) - O framework web usado.
+* [TypeScript](https://www.typescriptlang.org/) - TypeScript é JavaScript com sintaxe para tipos. 
+* [styled-components](https://styled-components.com/) - Estilização com JS e CSS.
+* [MUI](https://mui.com/pt/) - Biblioteca de componentes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✒️ Autores
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+
+* **Renan Brickes** - *Desenvolvedor* - [LinkedIn](https://www.linkedin.com/in/renan-brickes-822717140/)
+* **Gabriele Valerio** - *UX/UI Design* - [LinkedIn](https://www.linkedin.com/in/gabrielevaler/)
