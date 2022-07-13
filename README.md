@@ -12,8 +12,12 @@ Esse projeto teve como objetivo construir um app para receber os pedidos do rest
 reduzindo a equipe em trabalhos no salão, diminuindo o tempo de espera do cliente para realizar o pedido e
 oferecendo uma experiência inovadora.
 
+* [Layout](https://www.behance.net/gallery/138699685/Prototipo-App-Pedido) - Layout do protótipo.
+
 ![Menu](prints/01.png)
+
 ![Pasta](prints/02.png)
+
 ![Order](prints/03.png)
 
 ## :hammer: Funcionalidades do projeto
