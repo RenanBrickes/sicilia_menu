@@ -15,11 +15,18 @@ export const MenuOption = ({
   const [counter, setCounter] = useState<number>(0);
 
   const handleCounter = () => {
-    setCounter((value) => value + 1);
-    setTotalItem([
-      ...totalItem,
-      { name: name, value: value, amount: counter, image: image },
-    ]);
+    const ammoutItem = counter + 1;
+    const itemSelected = totalItem.find((e) => e.name === name);
+    if (itemSelected === undefined)
+      setTotalItem([
+        ...totalItem,
+        { name: name, value: value, amount: ammoutItem, image: image },
+      ]);
+    else {
+      itemSelected.amount = ammoutItem;
+      setTotalItem([...totalItem]);
+    }
+    setCounter(ammoutItem);
   };
 
   return (
