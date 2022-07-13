@@ -88,3 +88,46 @@ export const ButtonConfirm = styled(Button)`
     padding: 10px 35px !important;
   `}
 `;
+
+export const Alert = styled.div`
+  width: 500px;
+  height: 250px;
+  background-color: #e4dbdb;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+      0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+`;
+
+export const ContainerAlert = styled.div`
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+`;
+
+export const TypographyAlert = styled(Typography)`
+  ${({ theme }) => css`
+    font-family: ${theme.font.family.text} !important;
+    font-size: 25px !important;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 30px !important;
+  `}
+`;
+
+export const ButtonAlert = styled(Button)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.blue} !important;
+    font-family: ${theme.font.family.text} !important;
+    font-size: 16px !important;
+    color: white !important;
+    margin-bottom: 30px !important;
+    width: 250px !important;
+    height: 50px !important;
+    border-radius: 100px !important;
+    cursor: pointer;
+  `}
+`;
