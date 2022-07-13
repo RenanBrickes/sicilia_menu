@@ -7,7 +7,7 @@ as equipes de trabalho no salão.
 </p>
 
 ## O Projeto
-Esse projeto é uma releitura do seu layout original de um app feito pela UX/UI Design <a href="https://www.linkedin.com/in/gabrielevaler/">Gabriele Valerio</a>.
+Esse projeto é uma releitura do seu layout original de um protótipo feito pela UX/UI Design <a href="https://www.linkedin.com/in/gabrielevaler/">Gabriele Valerio</a>.
 Esse projeto teve como objetivo construir um app para receber os pedidos do restaurante direto da mesa
 reduzindo a equipe em trabalhos no salão, diminuindo o tempo de espera do cliente para realizar o pedido e
 oferecendo uma experiência inovadora.
