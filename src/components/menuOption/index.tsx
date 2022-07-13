@@ -32,7 +32,7 @@ export const MenuOption = ({
   return (
     <>
       <Grid item xs={3}>
-        <Styled.ImageItem src={image} alt="teste" />
+        <Styled.ImageItem src={image} alt={`Imagem de ${name}`} />
       </Grid>
       <Grid item xs={7}>
         <Styled.TypographyTitle>{name}</Styled.TypographyTitle>

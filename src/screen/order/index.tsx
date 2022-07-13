@@ -26,7 +26,12 @@ export const Order = () => {
       <Styled.ContainerStyled>
         <Grid container spacing={3}>
           {data.map((order, index) => (
-            <OrderMenu key={index} data={order} />
+            <OrderMenu
+              key={index}
+              data={order}
+              total={total}
+              setTotal={setTotal}
+            />
           ))}
         </Grid>
         <Styled.GridRequest container>
@@ -43,6 +48,9 @@ export const Order = () => {
         <Styled.TypographyTotal>
           Total : <Styled.TypographyValue>${`${total}`}</Styled.TypographyValue>
         </Styled.TypographyTotal>
+        <Styled.ContainerConfirm>
+          <Styled.ButtonConfirm>Confirm</Styled.ButtonConfirm>
+        </Styled.ContainerConfirm>
       </Styled.ContainerStyled>
       <MenuContainer />
     </>

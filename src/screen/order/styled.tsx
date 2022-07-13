@@ -1,4 +1,4 @@
-import { Container, TextField, Typography, Grid } from "@mui/material";
+import { Container, TextField, Typography, Grid, Button } from "@mui/material";
 import styled, { css } from "styled-components";
 
 export const Image = styled.img`
@@ -67,5 +67,24 @@ export const TypographyValue = styled.span`
     font-family: ${theme.font.family.text} !important;
     font-weight: bold !important;
     font-weight: bold;
+  `}
+`;
+
+export const ContainerConfirm = styled(Grid)`
+  display: grid;
+  justify-content: end;
+  margin-bottom: 50px;
+`;
+
+export const ButtonConfirm = styled(Button)`
+  ${({ theme }) => css`
+    color: white !important;
+    background-color: ${theme.colors.blue} !important;
+    cursor: pointer;
+    border-radius: 25px !important;
+    font-family: ${theme.font.family.text};
+    font-size: 14px !important;
+    font-weight: bold !important;
+    padding: 10px 35px !important;
   `}
 `;
