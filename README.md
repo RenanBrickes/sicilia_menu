@@ -1,5 +1,4 @@
-# Sicília
-![Logo Sicília](./prints/nome_02.png)
+# ![Logo Sicília](./prints/nome_02.png)
 Um app para receber pedidos de um restaurante focado em reduzir
 as equipes de trabalho no salão.
 
@@ -32,7 +31,7 @@ oferecendo uma experiência inovadora.
 - Adição de novas opções de menus;
 
 
-### 🔧 Instalação
+## 🔧 Instalação
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
 Clone este repositório. Você precisará de `node` e `npm` ou `yarn` instalados globalmente em sua máquina.
