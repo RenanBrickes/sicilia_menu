@@ -1,17 +1,17 @@
 import { Grid, Icon, Typography } from "@mui/material";
 import styled, { css } from "styled-components";
 
-export const ImageItem = styled.img`
+export const ImageItemStyled = styled.img`
   width: 100%;
   height: 150px;
   border-radius: 25px;
 `;
 
-export const GridContent = styled(Grid)`
+export const GridContentStyled = styled(Grid)`
   padding-left: 50px;
 `;
 
-export const TypographyStley = styled(Typography)`
+export const TypographyStyled = styled(Typography)`
   ${({ theme }) => css`
     font-family: ${theme.font.family.text} !important;
     font-size: 25px !important;
@@ -19,7 +19,7 @@ export const TypographyStley = styled(Typography)`
   `}
 `;
 
-export const GridAction = styled(Grid)`
+export const GridActionStyled = styled(Grid)`
   ${({ theme }) => css`
     display: grid;
     justify-content: space-between;
@@ -28,7 +28,7 @@ export const GridAction = styled(Grid)`
   `}
 `;
 
-export const Counter = styled.div`
+export const CounterStyled = styled.div`
   ${({ theme }) => css`
     text-align: center;
     display: grid;
@@ -39,7 +39,7 @@ export const Counter = styled.div`
   `}
 `;
 
-export const IconPlus = styled(Icon)`
+export const IconPlusStyled = styled(Icon)`
   ${({ theme }) => css`
     padding: 10px;
     background-color: ${theme.colors.blue};
@@ -49,7 +49,7 @@ export const IconPlus = styled(Icon)`
   `}
 `;
 
-export const IconRemove = styled(Icon)`
+export const IconRemoveStyled = styled(Icon)`
   ${({ theme }) => css`
     padding: 10px;
     background-color: ${theme.colors.blue};
@@ -59,7 +59,7 @@ export const IconRemove = styled(Icon)`
   `}
 `;
 
-export const GridIcon = styled.div`
+export const GridIconStyled = styled.div`
   display: flex;
   justify-content: center;
 `;
