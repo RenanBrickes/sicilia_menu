@@ -1,33 +1,18 @@
 import { Grid } from "@mui/material";
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import { MenuContainer } from "../../components/menu";
 import { OrderMenu } from "../../components/orderMenu";
-import * as Styled from "./styled";
+import { AlertStyled, ButtonAlertStyled, ButtonConfirmStyled, ContainerAlertStyled, ContainerConfirmStyled, ContainerStyled, GridRequestStyled, ImageStyled, TextFildRequestStyled, TitleStyled, TypographyAlertStyled, TypographyRequestStyled, TypographyTotalStyled, TypographyValueStyled } from "./styled";
+import { UseOrder } from "./hook";
 const bg = require("../../assets/bg.jpg") as string;
 export const Order = () => {
-  const { state } = useLocation();
-  const [total, setTotal] = useState<number>(0);
-  const [request, setRequest] = useState<String>("");
-  const navigate = useNavigate();
 
-  const data = state as Orders[];
-
-  useEffect(() => {
-    if (data !== null) {
-      data.forEach((order) => {
-        setTotal(
-          (total) => total + (order.amount > 0 ? order.amount : 1) * order.value
-        );
-      });
-    }
-  }, [data]);
+  const { total, request, data, setTotal, setRequest, navigate } = UseOrder();
 
   return (
     <>
-      <Styled.Image alt="Background bg" src={bg} />
-      <Styled.Title>Order</Styled.Title>
-      <Styled.ContainerStyled>
+      <ImageStyled alt="Background bg" src={bg} />
+      <TitleStyled>Order</TitleStyled>
+      <ContainerStyled>
         {data !== null ? (
           <>
             <Grid container spacing={3}>
@@ -40,11 +25,11 @@ export const Order = () => {
                 />
               ))}
             </Grid>
-            <Styled.GridRequest container>
-              <Styled.TypographyRequest>
+            <GridRequestStyled container>
+              <TypographyRequestStyled>
                 Special request:
-              </Styled.TypographyRequest>
-              <Styled.TextFildRequest
+              </TypographyRequestStyled>
+              <TextFildRequestStyled
                 id="outlined-multiline-static"
                 value={request}
                 multiline
@@ -52,37 +37,32 @@ export const Order = () => {
                 inputProps={{ style: { fontSize: 16 } }}
                 onChange={(element) => setRequest(element.target.value)}
               />
-            </Styled.GridRequest>
-            <Styled.TypographyTotal>
+            </GridRequestStyled>
+            <TypographyTotalStyled>
               Total :
-              <Styled.TypographyValue>${`${total}`}</Styled.TypographyValue>
-            </Styled.TypographyTotal>
-            <Styled.ContainerConfirm>
-              <Styled.ButtonConfirm>Confirm</Styled.ButtonConfirm>
-            </Styled.ContainerConfirm>
+              <TypographyValueStyled>${`${total}`}</TypographyValueStyled>
+            </TypographyTotalStyled>
+            <ContainerConfirmStyled>
+              <ButtonConfirmStyled>Confirm</ButtonConfirmStyled>
+            </ContainerConfirmStyled>
           </>
         ) : (
-          <Styled.ContainerAlert>
-            <Styled.Alert>
-              <Styled.TypographyAlert>
+          <ContainerAlertStyled>
+            <AlertStyled>
+              <TypographyAlertStyled>
                 There are no orders yet. <br /> Enter the menu and place your
                 order.
-              </Styled.TypographyAlert>
-              <Styled.ButtonAlert onClick={() => navigate("/")}>
+              </TypographyAlertStyled>
+              <ButtonAlertStyled onClick={() => navigate("/")}>
                 Menu
-              </Styled.ButtonAlert>
-            </Styled.Alert>
-          </Styled.ContainerAlert>
+              </ButtonAlertStyled>
+            </AlertStyled>
+          </ContainerAlertStyled>
         )}
-      </Styled.ContainerStyled>
+      </ContainerStyled>
       <MenuContainer />
     </>
   );
 };
 
-type Orders = {
-  name: string;
-  value: number;
-  amount: number;
-  image: string;
-};
+
