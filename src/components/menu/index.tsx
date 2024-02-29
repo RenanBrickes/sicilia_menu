@@ -1,36 +1,36 @@
 import { Grid, Tooltip, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import * as Styled from "./styled";
+import { ContainerMenuStyled, ContainerStyled, GridMenuStyled, IconDivStyled, IconeStyled } from "./styled";
 
 export const MenuContainer = () => {
   const navigate = useNavigate();
   return (
-    <Styled.Container>
-      <Styled.ContainerMenu>
+    <ContainerStyled>
+      <ContainerMenuStyled>
         <Grid container spacing={3}>
-          <Styled.GridMenu item xs={4}>
+          <GridMenuStyled item xs={4}>
             <Tooltip title={<Typography fontSize={12}>Menu</Typography>}>
-              <Styled.IconDiv onClick={() => navigate("/")}>
-                <Styled.Icone>restaurant_menu</Styled.Icone>
-              </Styled.IconDiv>
+              <IconDivStyled onClick={() => navigate("/")}>
+                <IconeStyled>restaurant_menu</IconeStyled>
+              </IconDivStyled>
             </Tooltip>
-          </Styled.GridMenu>
-          <Styled.GridMenu item xs={4}>
+          </GridMenuStyled>
+          <GridMenuStyled item xs={4}>
             <Tooltip title={<Typography fontSize={12}>Order</Typography>}>
-              <Styled.IconDiv onClick={() => navigate("/Order")}>
-                <Styled.Icone>menu</Styled.Icone>
-              </Styled.IconDiv>
+              <IconDivStyled onClick={() => navigate("/Order")}>
+                <IconeStyled>menu</IconeStyled>
+              </IconDivStyled>
             </Tooltip>
-          </Styled.GridMenu>
-          <Styled.GridMenu item xs={4}>
+          </GridMenuStyled>
+          <GridMenuStyled item xs={4}>
             <Tooltip title={<Typography fontSize={12}>Help</Typography>}>
-              <Styled.IconDiv onClick={() => navigate("/Help")}>
-                <Styled.Icone>question_mark</Styled.Icone>
-              </Styled.IconDiv>
+              <IconDivStyled onClick={() => navigate("/Help")}>
+                <IconeStyled>question_mark</IconeStyled>
+              </IconDivStyled>
             </Tooltip>
-          </Styled.GridMenu>
+          </GridMenuStyled>
         </Grid>
-      </Styled.ContainerMenu>
-    </Styled.Container>
+      </ContainerMenuStyled>
+    </ContainerStyled>
   );
 };

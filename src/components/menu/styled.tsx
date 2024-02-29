@@ -1,7 +1,7 @@
 import { Grid, Icon } from "@mui/material";
 import styled, { css } from "styled-components";
 
-export const ContainerMenu = styled.div`
+export const ContainerMenuStyled = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.blue};
     margin-left: 25px !important;
@@ -14,18 +14,18 @@ export const ContainerMenu = styled.div`
   `}
 `;
 
-export const Container = styled.div`
+export const ContainerStyled = styled.div`
   position: fixed;
   width: 100%;
   bottom: 0;
 `;
 
-export const GridMenu = styled(Grid)`
+export const GridMenuStyled = styled(Grid)`
   display: grid;
   justify-content: center;
 `;
 
-export const IconDiv = styled.div`
+export const IconDivStyled = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.blue};
     display: grid;
@@ -45,6 +45,6 @@ export const IconDiv = styled.div`
   `}
 `;
 
-export const Icone = styled(Icon)`
+export const IconeStyled = styled(Icon)`
   font-size: 50px !important;
 `;
