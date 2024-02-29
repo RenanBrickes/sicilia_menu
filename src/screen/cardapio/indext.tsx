@@ -1,22 +1,18 @@
 import { Grid } from "@mui/material";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { MenuContainer } from "../../components/menu";
 import { MenuOption } from "../../components/menuOption";
-import * as Styled from "./styled";
+import { ButtonConfirmStyled, ContainerConfirmStyled, ContainerStyled, ImageStyled, TitleStyled } from "./styled";
+import { Menu, Option } from "./types";
+import { UseCardapio } from "./hook";
 const bg = require("../../assets/bg.jpg") as string;
 
 export const Cardapio = ({ data }: { data: Menu }) => {
-  const [totalItem, setTotalItem] = useState<ItemOrder[]>([]);
-  let navigate = useNavigate();
-  const handleConfirm = () => {
-    navigate("/order", { state: totalItem });
-  };
+  const { handleConfirm, setTotalItem, totalItem } = UseCardapio();
   return (
     <>
-      <Styled.Image alt="Background bg" src={bg} />
-      <Styled.Title>{data.name}</Styled.Title>
-      <Styled.ContainerStyled>
+      <ImageStyled alt="Background bg" src={bg} />
+      <TitleStyled>{data.name}</TitleStyled>
+      <ContainerStyled>
         <Grid container spacing={3}>
           {data.options.map((option: Option, index: number) => (
             <MenuOption
@@ -28,34 +24,14 @@ export const Cardapio = ({ data }: { data: Menu }) => {
           ))}
         </Grid>
         {totalItem.length > 0 && (
-          <Styled.ContainerConfirm>
-            <Styled.ButtonConfirm onClick={handleConfirm}>
+          <ContainerConfirmStyled>
+            <ButtonConfirmStyled onClick={handleConfirm}>
               Confirm
-            </Styled.ButtonConfirm>
-          </Styled.ContainerConfirm>
+            </ButtonConfirmStyled>
+          </ContainerConfirmStyled>
         )}
-      </Styled.ContainerStyled>
+      </ContainerStyled>
       <MenuContainer />
     </>
   );
-};
-
-type Menu = {
-  name: string;
-  image: string;
-  options: Option[];
-};
-
-type Option = {
-  name: string;
-  description: string;
-  value: number;
-  image: string;
-};
-
-type ItemOrder = {
-  name: string;
-  value: number;
-  amount: number;
-  image: string;
 };
