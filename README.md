@@ -62,7 +62,5 @@ Para visitar o aplicativo:
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
 * **Renan Brickes** - *Desenvolvedor* - [LinkedIn](https://www.linkedin.com/in/renan-brickes-822717140/)
 * **Gabriele Valerio** - *UX/UI Design* - [LinkedIn](https://www.linkedin.com/in/gabrielevaler/)
