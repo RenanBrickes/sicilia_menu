@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import styled, { css } from "styled-components";
 
-export const Image = styled.img`
+export const ImageStyled = styled.img`
   ${() => css`
     width: 100%;
     height: 250px;
@@ -11,7 +11,7 @@ export const Image = styled.img`
   `}
 `;
 
-export const Title = styled.h1`
+export const TitleStyled = styled.h1`
   ${({ theme }) => css`
     margin-left: 80px;
     color: ${theme.colors.darkBlue};
@@ -27,7 +27,7 @@ export const Title = styled.h1`
     }
   `}
 `;
-export const Alert = styled.div`
+export const AlertStyled = styled.div`
   width: 500px;
   height: 250px;
   background-color: #e4dbdb;
@@ -39,7 +39,7 @@ export const Alert = styled.div`
     0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 `;
 
-export const ContainerAlert = styled.div`
+export const ContainerAlertStyled = styled.div`
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -47,7 +47,7 @@ export const ContainerAlert = styled.div`
   margin-bottom: 250px;
 `;
 
-export const TypographyAlert = styled(Typography)`
+export const TypographyAlertStyled = styled(Typography)`
   ${({ theme }) => css`
     font-family: ${theme.font.family.text} !important;
     font-size: 25px !important;
@@ -58,7 +58,7 @@ export const TypographyAlert = styled(Typography)`
   `}
 `;
 
-export const ButtonAlert = styled(Button)`
+export const ButtonAlertStyled = styled(Button)`
   ${({ theme }) => css`
     background-color: ${theme.colors.blue} !important;
     font-family: ${theme.font.family.text} !important;

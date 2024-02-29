@@ -1,39 +1,37 @@
-import { useState } from "react";
+
 import { MenuContainer } from "../../components/menu";
-import * as Styled from "./styled";
+import { UseHelp } from "./hook";
+import { AlertStyled, ButtonAlertStyled, ContainerAlertStyled, ImageStyled, TitleStyled, TypographyAlertStyled } from "./styled";
 const bg = require("../../assets/bg.jpg") as string;
 export const Help = () => {
-  const [callWaiter, setCallWaiter] = useState<boolean>(false);
-  const handleCallWaiter = () => {
-    setCallWaiter(true);
-  };
+  const { callWaiter, handleCallWaiter } = UseHelp();
   return (
     <>
-      <Styled.Image alt="Background bg" src={bg} />
-      <Styled.Title>Help</Styled.Title>
-      <Styled.ContainerAlert>
-        <Styled.Alert>
+      <ImageStyled alt="Background bg" src={bg} />
+      <TitleStyled>Help</TitleStyled>
+      <ContainerAlertStyled>
+        <AlertStyled>
           {!callWaiter ? (
             <>
-              <Styled.TypographyAlert>
+              <TypographyAlertStyled>
                 If you need help or are <br />
                 having trouble placing <br />
                 your order, call a waiter.
-              </Styled.TypographyAlert>
-              <Styled.ButtonAlert onClick={handleCallWaiter}>
+              </TypographyAlertStyled>
+              <ButtonAlertStyled onClick={handleCallWaiter}>
                 Call waiter
-              </Styled.ButtonAlert>
+              </ButtonAlertStyled>
             </>
           ) : (
             <>
-              <Styled.TypographyAlert>
+              <TypographyAlertStyled>
                 The waiter is <br />
                 on his way!
-              </Styled.TypographyAlert>
+              </TypographyAlertStyled>
             </>
           )}
-        </Styled.Alert>
-      </Styled.ContainerAlert>
+        </AlertStyled>
+      </ContainerAlertStyled>
       <MenuContainer />
     </>
   );
