@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Image = styled.img`
+export const ImageStyled = styled.img`
   ${() => css`
     width: 100%;
     height: 250px;
@@ -10,7 +10,7 @@ export const Image = styled.img`
   `}
 `;
 
-export const Title = styled.h1`
+export const TitleStyled = styled.h1`
   ${({ theme }) => css`
     margin-left: 80px;
     color: ${theme.colors.darkBlue};
