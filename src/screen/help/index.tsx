@@ -1,10 +1,10 @@
 
 import { MenuContainer } from "../../components/menu";
-import { UseHelp } from "./hook";
+import { useHelp } from "./hook";
 import { AlertStyled, ButtonAlertStyled, ContainerAlertStyled, ImageStyled, TitleStyled, TypographyAlertStyled } from "./styled";
 const bg = require("../../assets/bg.jpg") as string;
 export const Help = () => {
-  const { callWaiter, handleCallWaiter } = UseHelp();
+  const { callWaiter, handleCallWaiter } = useHelp();
   return (
     <>
       <ImageStyled alt="Background bg" src={bg} />

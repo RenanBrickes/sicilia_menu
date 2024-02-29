@@ -3,11 +3,11 @@ import { MenuContainer } from "../../components/menu";
 import { MenuOption } from "../../components/menuOption";
 import { ButtonConfirmStyled, ContainerConfirmStyled, ContainerStyled, ImageStyled, TitleStyled } from "./styled";
 import { Menu, Option } from "./types";
-import { UseCardapio } from "./hook";
+import { useCardapio } from "./hook";
 const bg = require("../../assets/bg.jpg") as string;
 
 export const Cardapio = ({ data }: { data: Menu }) => {
-  const { handleConfirm, setTotalItem, totalItem } = UseCardapio();
+  const { handleConfirm, setTotalItem, totalItem } = useCardapio();
   return (
     <>
       <ImageStyled alt="Background bg" src={bg} />

@@ -1,14 +1,14 @@
 import { Grid } from "@mui/material";
 import { CounterStyled, GridActionStyled, GridContentStyled, GridIconStyled, IconPlusStyled, IconRemoveStyled, ImageItemStyled, TypographyStyled } from "./styled";
 import { OrderMenuInterface } from "./types";
-import { UseOrderMenu } from "./hook";
+import { useOrderMenu } from "./hook";
 export const OrderMenu = ({
   data,
   total,
   setTotal,
 }: OrderMenuInterface) => {
 
-  const { counterItem, showItem, handleAddTotal, handleRemoveTotal } = UseOrderMenu({ data, total, setTotal });
+  const { counterItem, showItem, handleAddTotal, handleRemoveTotal } = useOrderMenu({ data, total, setTotal });
 
   return (
     <>

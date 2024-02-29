@@ -1,7 +1,7 @@
 import { OrderMenuInterface } from "./types";
 import { useState } from "react";
 
-export const UseOrderMenu = ({ data, total, setTotal }: OrderMenuInterface) => {
+export const useOrderMenu = ({ data, total, setTotal }: OrderMenuInterface) => {
     const [counterItem, setCounterItem] = useState<number>(data.amount);
     const [showItem, setShowItem] = useState<boolean>(true);
 

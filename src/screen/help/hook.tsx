@@ -1,5 +1,5 @@
 import { useState } from "react";
-export const UseHelp = () => {
+export const useHelp = () => {
     const [callWaiter, setCallWaiter] = useState<boolean>(false);
     const handleCallWaiter = () => {
         setCallWaiter(true);

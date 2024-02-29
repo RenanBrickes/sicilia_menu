@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MenuOptionInterface } from "./types";
-export const UseMenuOption = ({ data, totalItem, setTotalItem }: MenuOptionInterface) => {
+export const useMenuOption = ({ data, totalItem, setTotalItem }: MenuOptionInterface) => {
     const { name, description, value, image } = data;
     const [counter, setCounter] = useState<number>(0);
 

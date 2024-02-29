@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { CounterStyled, GridAddItemStyled, IconPlusStyled, ImageItemStyled, TypographyDescriptionStyled, TypographyTitleStyled, TypographyValueStyled } from "./styled";
 import { MenuOptionInterface } from "./types";
-import { UseMenuOption } from "./hook";
+import { useMenuOption } from "./hook";
 
 export const MenuOption = ({
   data,
@@ -10,7 +10,7 @@ export const MenuOption = ({
   totalItem,
 }: MenuOptionInterface) => {
 
-  const { name, description, value, image, counter, handleCounter } = UseMenuOption({ data, totalItem, setTotalItem });
+  const { name, description, value, image, counter, handleCounter } = useMenuOption({ data, totalItem, setTotalItem });
 
   return (
     <>

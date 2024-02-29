@@ -2,11 +2,11 @@ import { Grid } from "@mui/material";
 import { MenuContainer } from "../../components/menu";
 import { OrderMenu } from "../../components/orderMenu";
 import { AlertStyled, ButtonAlertStyled, ButtonConfirmStyled, ContainerAlertStyled, ContainerConfirmStyled, ContainerStyled, GridRequestStyled, ImageStyled, TextFildRequestStyled, TitleStyled, TypographyAlertStyled, TypographyRequestStyled, TypographyTotalStyled, TypographyValueStyled } from "./styled";
-import { UseOrder } from "./hook";
+import { useOrder } from "./hook";
 const bg = require("../../assets/bg.jpg") as string;
 export const Order = () => {
 
-  const { total, request, data, setTotal, setRequest, navigate } = UseOrder();
+  const { total, request, data, setTotal, setRequest, navigate } = useOrder();
 
   return (
     <>

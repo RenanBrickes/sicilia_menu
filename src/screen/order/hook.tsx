@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Orders } from "./types";
 
-export const UseOrder = () => {
+export const useOrder = () => {
     const { state } = useLocation();
     const [total, setTotal] = useState<number>(0);
     const [request, setRequest] = useState<String>("");

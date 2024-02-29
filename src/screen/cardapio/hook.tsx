@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ItemOrder } from "./types";
-export const UseCardapio = () => {
+export const useCardapio = () => {
     const [totalItem, setTotalItem] = useState<ItemOrder[]>([]);
     let navigate = useNavigate();
     const handleConfirm = () => {
