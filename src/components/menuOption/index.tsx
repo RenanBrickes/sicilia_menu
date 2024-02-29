@@ -1,64 +1,33 @@
 import { Grid } from "@mui/material";
-import React, { useState } from "react";
-import * as Styled from "./styled";
+import React from "react";
+import { CounterStyled, GridAddItemStyled, IconPlusStyled, ImageItemStyled, TypographyDescriptionStyled, TypographyTitleStyled, TypographyValueStyled } from "./styled";
+import { MenuOptionInterface } from "./types";
+import { UseMenuOption } from "./hook";
 
 export const MenuOption = ({
   data,
   setTotalItem,
   totalItem,
-}: {
-  data: Option;
-  setTotalItem: React.Dispatch<React.SetStateAction<ItemOrder[]>>;
-  totalItem: ItemOrder[];
-}) => {
-  const { name, description, value, image } = data;
-  const [counter, setCounter] = useState<number>(0);
+}: MenuOptionInterface) => {
 
-  const handleCounter = () => {
-    const ammoutItem = counter + 1;
-    const itemSelected = totalItem.find((e) => e.name === name);
-    if (itemSelected === undefined)
-      setTotalItem([
-        ...totalItem,
-        { name: name, value: value, amount: ammoutItem, image: image },
-      ]);
-    else {
-      itemSelected.amount = ammoutItem;
-      setTotalItem([...totalItem]);
-    }
-    setCounter(ammoutItem);
-  };
+  const { name, description, value, image, counter, handleCounter } = UseMenuOption({ data, totalItem, setTotalItem });
 
   return (
     <>
       <Grid item xs={3}>
-        <Styled.ImageItem src={image} alt={`Imagem de ${name}`} />
+        <ImageItemStyled src={image} alt={`Imagem de ${name}`} />
       </Grid>
       <Grid item xs={7}>
-        <Styled.TypographyTitle>{name}</Styled.TypographyTitle>
-        <Styled.TypographyDescription>
+        <TypographyTitleStyled>{name}</TypographyTitleStyled>
+        <TypographyDescriptionStyled>
           {description}
-        </Styled.TypographyDescription>
-        <Styled.TypographyValue>${value}</Styled.TypographyValue>
+        </TypographyDescriptionStyled>
+        <TypographyValueStyled>${value}</TypographyValueStyled>
       </Grid>
-      <Styled.GridAddItem item xs={2}>
-        {counter > 0 && <Styled.Counter>{counter}</Styled.Counter>}
-        <Styled.IconPlus onClick={handleCounter}>add</Styled.IconPlus>
-      </Styled.GridAddItem>
+      <GridAddItemStyled item xs={2}>
+        {counter > 0 && <CounterStyled>{counter}</CounterStyled>}
+        <IconPlusStyled onClick={handleCounter}>add</IconPlusStyled>
+      </GridAddItemStyled>
     </>
   );
-};
-
-type Option = {
-  name: string;
-  description: string;
-  value: number;
-  image: string;
-};
-
-type ItemOrder = {
-  name: string;
-  value: number;
-  amount: number;
-  image: string;
 };

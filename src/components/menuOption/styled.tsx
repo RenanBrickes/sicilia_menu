@@ -1,7 +1,7 @@
 import { Grid, Icon, Typography } from "@mui/material";
 import styled, { css } from "styled-components";
 
-export const TypographyTitle = styled(Typography)`
+export const TypographyTitleStyled = styled(Typography)`
   ${({ theme }) => css`
     font-size: 25px !important;
     font-weight: 900 !important;
@@ -9,14 +9,14 @@ export const TypographyTitle = styled(Typography)`
   `}
 `;
 
-export const TypographyDescription = styled(Typography)`
+export const TypographyDescriptionStyled = styled(Typography)`
   ${({ theme }) => css`
     font-size: 20px !important;
     font-family: ${theme.font.family.text} !important;
   `}
 `;
 
-export const TypographyValue = styled(Typography)`
+export const TypographyValueStyled = styled(Typography)`
   ${({ theme }) => css`
     font-size: 25px !important;
     font-weight: 900 !important;
@@ -25,14 +25,14 @@ export const TypographyValue = styled(Typography)`
   `}
 `;
 
-export const GridAddItem = styled(Grid)`
+export const GridAddItemStyled = styled(Grid)`
   display: grid;
   grid-template-columns: 50px 50px;
   justify-content: center;
   align-content: center;
 `;
 
-export const Counter = styled.div`
+export const CounterStyled = styled.div`
   ${({ theme }) => css`
     text-align: center;
     display: grid;
@@ -44,7 +44,7 @@ export const Counter = styled.div`
   `}
 `;
 
-export const IconPlus = styled(Icon)`
+export const IconPlusStyled = styled(Icon)`
   ${({ theme }) => css`
     padding: 10px;
     background-color: ${theme.colors.blue};
@@ -54,7 +54,7 @@ export const IconPlus = styled(Icon)`
   `}
 `;
 
-export const ImageItem = styled.img`
+export const ImageItemStyled = styled.img`
   width: 100%;
   height: 150px;
   border-radius: 25px;
